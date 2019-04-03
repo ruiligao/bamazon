@@ -96,7 +96,7 @@ function addToInventory() {
                 {
                     type: "number",
                     message: "how much you want to add?",
-                    name: "addAmount"
+                    name: "addAmount",
                 }
             ])
             .then(function (answer) {

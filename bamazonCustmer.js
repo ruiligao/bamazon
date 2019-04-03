@@ -23,7 +23,6 @@ function start() {
         // console.log(results);
         console.table(results);
         runInquirer()
-        // connection.end();
     });
 }
 function runInquirer() {
@@ -43,17 +42,11 @@ function runInquirer() {
         .then(answer => {
             connection.query("SELECT item_id,stock_quantity FROM products", function (err, res, fields) {
                 if (err) throw err;
-                // console.log(res);
-                // console.log(res[0].stock_quantity);
-                // for loop find the custmer buy item_id and quantity
                 if (res) {
-                    // console.log(res);
-                    // console.log(answer.id);
                     var chosenItem;
                     for (i = 0; i < res.length; i++) {
                         if (answer.id === res[i].item_id) {
                             chosenItem = res[i];
-                            // console.log(chosenItem);
                         }
                     }
                     if (answer.quantity <= chosenItem.stock_quantity) {
@@ -69,15 +62,37 @@ function runInquirer() {
                             ],
                             function (err) {
                                 if (err) throw err;
-                                console.log("Database Updated!");
-                                connection.end();
+                                console.log("Stock Updated!");
+                                check();
                             }
                         );
                     } else {
                         console.log("Sorry, We have insufficient quantity!");
-                        connection.end();
+                        check();
                     }
                 }
             })
         });
+        
+}
+
+function check(){
+    inquirer
+    .prompt([
+        {
+            type: "list",
+            message: "Do you want to buy another product?",
+            choices: ['Yes','No'],
+            name: "action"
+        }
+    ])
+    .then(function(answer){
+        if(answer.action==="Yes") {
+            start()
+        }
+        else {
+            console.log("BEY BEY!")
+            connection.end();
+        }
+    });
 }

@@ -2,12 +2,13 @@
 ## Overview
 This application implements a simple command line based storefront using the npm inquirer package and the MySQL database backend together with the npm mysql package. The application presents two interfaces: customer and manager.
 ## Instruction
-### 1. After download or clone the repos, you can see  two npm dependencies in package json! Before running the JavaScript files mentioned above, please run npm install in your terminal to download the prompt and mysql node packages.
+### 1. ownload or clone the repos, 
+There are two npm dependencies in package json! Before running the JavaScript files mentioned above, please run npm install in your terminal to download the prompt and mysql node packages.
 ### 2.MySQL Database Setup
 In order to run this application, you should have the MySQL database already set up on your machine. If you don't, visit the MySQL installation page to install the version you need for your operating system. Once you have MySQL isntalled, you will be able to create the Bamazon database and the products table with the SQL code found in Bamazon.sql. Run this code inside your MySQL client like Sequel Pro to populate the database, then you will be ready to proceed with running the Bamazon customer and manager interfaces.
 
 ## Node.js
-Three JavaScript files replicate the basics of a simple ecommerce engine:
+Two JavaScript files replicate the basics of a simple ecommerce engine:
 BamazonCustomer.js (See example here)
 Receives orders from customers via the command line and interfaces with mySQL to deplete stock from the store's inventory.
 BamazonManager.js (See example here)

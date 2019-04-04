@@ -168,25 +168,3 @@ function addNewProduct() {
             });
         });
 }
-
-
-// create a new table with sale price 
-//left join 
-//inquire prompt to choose what to do 
-//run user's action 
-//if answer.action=view Products for sale run viewProducts()
-//viewProdcuts() SELECT products.item_id, products.product_name, products.price and saleProduct.sale_price FROM products LEFT JOIN saleProduct ON
-//products.name=saleProduct.name
-
-//if answer.action = view Low, run viewLowInverntory()
-//VLI() list all the products stock_quantity < 5 
-
-
-//if answeer.action =Add to Inventory run addInventory()
-// inquirer prompt to choise item from the list to update
-
-//if answer.action = add new Proudct, run addNewProduct()
-//inquirer what 's want to add?
-// which department 
-//the quantity?
-// INSERT INTO products (prodcut_name, department, stock-qautity)

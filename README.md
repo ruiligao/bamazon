@@ -34,12 +34,3 @@ A sample of the menu is below:
 #### Add New Product
 
 ![2-5](https://user-images.githubusercontent.com/47795010/55520949-7f441580-5633-11e9-80f2-4db1aedd4133.png)
-
-
-## MySQL
-The JavaScript files mentioned above query a MySQL database called bamazon which is locally hosted on my laptop.
-Please refer to the schema.sql file to see how the database was created using raw SQL queries.
-If you wish to run this app on your own machine, then please note the following commands:
-If you are new to MySQL, please set up MySQL and MySQL Workbench on your laptop and then open up to your localhost connection.
-Run CREATE DATABASE bamazon; in mySQL Workbench.
-Be sure to select the correct database by running the USE Bamazon;
